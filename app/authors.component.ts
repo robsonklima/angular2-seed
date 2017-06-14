@@ -15,6 +15,7 @@ import { AuthorService } from "./author.service";
         `,
         providers: [AuthorService]
 })
+
 export class AuthorsComponent {
     title = "The title of authors page";
     authors;
