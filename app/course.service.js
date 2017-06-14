@@ -10,8 +10,10 @@ System.register([], function(exports_1, context_1) {
                 }
                 CourseService.prototype.getCourses = function () {
                     return [
-                        { name: "Ola" },
-                        { name: "Hello" }
+                        { name: "Vue", year: "2016" },
+                        { name: "Angular JS", year: "2017" },
+                        { name: "React JS", year: "2017" },
+                        { name: "Node JS", year: "2017" }
                     ];
                 };
                 return CourseService;

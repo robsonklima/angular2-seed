@@ -10,7 +10,7 @@ import { AutoGrowDirective } from "./auto-grow.directive";
         <input type="text" autoGrow />
         <ul>
             <li *ngFor="#course of courses">
-                {{ course.name }}
+                {{ course.name }} - {{ course.year }}
             </li>
         </ul>`,
     providers: [CourseService],
