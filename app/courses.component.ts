@@ -1,5 +1,5 @@
-import{ Component } from 'angular2/core'
-import{ CourseService } from './course.service'
+import{ Component } from 'angular2/core';
+import{ CourseService } from './course.service';
 import { AutoGrowDirective } from "./auto-grow.directive";
 
 @Component({
