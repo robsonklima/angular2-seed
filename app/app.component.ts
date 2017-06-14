@@ -9,5 +9,6 @@ import {AuthorsComponent} from "./authors.component";
         <courses></courses>
         <authors></authors>`,
     directives: [CoursesComponent, AuthorsComponent]
+    
 })
 export class AppComponent { }
