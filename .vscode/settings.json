@@ -3,6 +3,7 @@
     "editor.fontSize": 13,
     "files.exclude" : {
         "**/.git":true,
+        "**/node_modules":true,
         //"**/.gitignore":true,
         "**/.DS_Store":true,
         "**/*.map":true,
