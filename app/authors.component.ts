@@ -11,9 +11,8 @@ import { AuthorService } from "./author.service";
             <li *ngFor="#author of authors">
                 {{ author }}
             </li>
-        </ul>
-        `,
-        providers: [AuthorService]
+        </ul>`,
+    providers: [AuthorService]
 })
 
 export class AuthorsComponent {
