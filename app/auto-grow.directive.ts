@@ -4,7 +4,7 @@ import {Directive, ElementRef, Renderer} from 'angular2/core'
     selector: '[autoGrow]',
     host: {
         '(focus)': 'onFocus()',
-        '(blur)': 'onBlur()',
+        '(blur)': 'onBlur()'
     }
 })
 export class AutoGrowDirective {

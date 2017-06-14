@@ -36,7 +36,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                         selector: '[autoGrow]',
                         host: {
                             '(focus)': 'onFocus()',
-                            '(blur)': 'onBlur()',
+                            '(blur)': 'onBlur()'
                         }
                     }), 
                     __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
