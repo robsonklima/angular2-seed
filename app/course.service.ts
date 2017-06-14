@@ -1,6 +1,8 @@
-
 export class CourseService {
-    getCourses() : string[] {
-        return ["Course1", "Course2", "Course3"];    
+    getCourses() {
+        return [
+            {name: "Ola"},
+            {name: "Hello"}
+        ];    
     }
 }
