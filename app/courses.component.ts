@@ -19,7 +19,7 @@ import{AutoGrowDirective} from './auto-grow.directive'
     directives: [AutoGrowDirective]
 })
 export class CoursesComponent {
-    title = "The title of courses page";
+    title = "The title of courses page.";
     courses;
 
     constructor(courseService: CourseService) {
