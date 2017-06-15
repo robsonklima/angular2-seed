@@ -4,6 +4,7 @@ import { AuthorsComponent } from "./authors.component";
 import { PropertyBindingComponent } from "./property-binding.component";
 import { ClassBindingComponent } from "./class-binding.component";
 import { StyleBindingComponent } from "./style-binding.component";
+import { EventBindingComponent } from "./event-binding.component";
 
 @Component({
     selector: 'my-app',
@@ -22,7 +23,8 @@ import { StyleBindingComponent } from "./style-binding.component";
         AuthorsComponent, 
         PropertyBindingComponent,
         ClassBindingComponent,
-        StyleBindingComponent
+        StyleBindingComponent,
+        EventBindingComponent
     ]
     
 })

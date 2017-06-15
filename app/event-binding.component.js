@@ -21,10 +21,17 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             EventBindingComponent = (function () {
                 function EventBindingComponent() {
                 }
+                EventBindingComponent.prototype.onClick = function ($event) {
+                    $event.stopPropagation();
+                    console.log("Clicked", $event);
+                };
+                EventBindingComponent.prototype.onDivClick = function () {
+                    console.log("Handled by DIV");
+                };
                 EventBindingComponent = __decorate([
                     core_1.Component({
                         selector: 'event-binding',
-                        template: "\n        <p>Event Binding</p>"
+                        template: "\n        <p>Event Binding</p>\n        <div (click)=\"onDivClick()\">\n            <button (click)=\"onClick($event)\">Submit</button>\n        <div>\n    "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], EventBindingComponent);
