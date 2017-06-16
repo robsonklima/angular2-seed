@@ -11,30 +11,35 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var ContactFormComponent;
+    var SubscribeFormComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            ContactFormComponent = (function () {
-                function ContactFormComponent() {
+            SubscribeFormComponent = (function () {
+                function SubscribeFormComponent() {
+                    this.frequencies = [
+                        { id: 1, label: 'Daily' },
+                        { id: 2, label: 'Weekly' },
+                        { id: 3, label: 'Monthly' }
+                    ];
                 }
-                ContactFormComponent.prototype.onSubmit = function (form) {
-                    console.log(form);
+                SubscribeFormComponent.prototype.onSubmit = function (form) {
+                    console.log(form.value);
                 };
-                ContactFormComponent = __decorate([
+                SubscribeFormComponent = __decorate([
                     core_1.Component({
-                        selector: 'contact-form',
-                        templateUrl: 'app/contact-form.component.html'
+                        selector: 'subscribe-form',
+                        templateUrl: 'app/subscribe-form.template.html'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], ContactFormComponent);
-                return ContactFormComponent;
+                ], SubscribeFormComponent);
+                return SubscribeFormComponent;
             }());
-            exports_1("ContactFormComponent", ContactFormComponent);
+            exports_1("SubscribeFormComponent", SubscribeFormComponent);
         }
     }
 });
-//# sourceMappingURL=contact-form.component.js.map
+//# sourceMappingURL=subscribe-form.component.js.map
