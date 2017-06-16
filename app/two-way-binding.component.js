@@ -11,28 +11,28 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var StyleBindingComponent;
+    var TwoWayBindingComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            StyleBindingComponent = (function () {
-                function StyleBindingComponent() {
-                    this.canSave = false;
+            TwoWayBindingComponent = (function () {
+                function TwoWayBindingComponent() {
+                    this.title = "Angular App";
                 }
-                StyleBindingComponent = __decorate([
+                TwoWayBindingComponent = __decorate([
                     core_1.Component({
-                        selector: 'style-binding',
-                        template: "\n        <button\n            [ngStyle]=\"{\n                'backgroundColor': canSave ? 'blue' : 'gray',\n                'color': canSave ? 'white' : 'black',\n                'fontWeight': canSave ? 'bold' : 'normal'\n            }\"\n        >Submit</button>\n    "
+                        selector: 'two-way-binding',
+                        template: "\n        <p>Two Way Binding</p>\n        <input type=\"text\" [(ngModel)]=\"title\" />\n        <!-- <input type=\"text\" bindon-ngModel=\"title\" /> -->\n        <br>\n        Preview: {{ title }} \n        <button class=\"btn btn-default\" (click)=\"title = ''\">Clear</button>\n    "
                     }), 
                     __metadata('design:paramtypes', [])
-                ], StyleBindingComponent);
-                return StyleBindingComponent;
+                ], TwoWayBindingComponent);
+                return TwoWayBindingComponent;
             }());
-            exports_1("StyleBindingComponent", StyleBindingComponent);
+            exports_1("TwoWayBindingComponent", TwoWayBindingComponent);
         }
     }
 });
-//# sourceMappingURL=style-binding.component.js.map
+//# sourceMappingURL=two-way-binding.component.js.map

@@ -1,4 +1,4 @@
-System.register(['angular2/core'], function(exports_1, context_1) {
+System.register(['angular2/core', "./author.service"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,29 +10,33 @@ System.register(['angular2/core'], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
-    var StyleBindingComponent;
+    var core_1, author_service_1;
+    var NgforComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (author_service_1_1) {
+                author_service_1 = author_service_1_1;
             }],
         execute: function() {
-            StyleBindingComponent = (function () {
-                function StyleBindingComponent() {
-                    this.canSave = false;
+            NgforComponent = (function () {
+                function NgforComponent() {
+                    this.courses = ["Course 1", "Course 2", "Course 3"];
                 }
-                StyleBindingComponent = __decorate([
+                NgforComponent = __decorate([
                     core_1.Component({
-                        selector: 'style-binding',
-                        template: "\n        <button\n            [ngStyle]=\"{\n                'backgroundColor': canSave ? 'blue' : 'gray',\n                'color': canSave ? 'white' : 'black',\n                'fontWeight': canSave ? 'bold' : 'normal'\n            }\"\n        >Submit</button>\n    "
+                        selector: 'ngfor',
+                        template: "\n        <h2>Courses</h2>\n        <ul>\n            <li *ngFor=\"#course of courses, #i = index\">\n                {{ i }} - {{ course }}\n            </li>\n        </ul>",
+                        providers: [author_service_1.AuthorService]
                     }), 
                     __metadata('design:paramtypes', [])
-                ], StyleBindingComponent);
-                return StyleBindingComponent;
+                ], NgforComponent);
+                return NgforComponent;
             }());
-            exports_1("StyleBindingComponent", StyleBindingComponent);
+            exports_1("NgforComponent", NgforComponent);
         }
     }
 });
-//# sourceMappingURL=style-binding.component.js.map
+//# sourceMappingURL=ngfor.component.js.map

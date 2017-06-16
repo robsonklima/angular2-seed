@@ -11,28 +11,29 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var StyleBindingComponent;
+    var NgswitchComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            StyleBindingComponent = (function () {
-                function StyleBindingComponent() {
-                    this.canSave = false;
+            NgswitchComponent = (function () {
+                function NgswitchComponent() {
+                    this.viewMode = 'map';
                 }
-                StyleBindingComponent = __decorate([
+                NgswitchComponent = __decorate([
                     core_1.Component({
-                        selector: 'style-binding',
-                        template: "\n        <button\n            [ngStyle]=\"{\n                'backgroundColor': canSave ? 'blue' : 'gray',\n                'color': canSave ? 'white' : 'black',\n                'fontWeight': canSave ? 'bold' : 'normal'\n            }\"\n        >Submit</button>\n    "
+                        selector: 'ngswitch',
+                        template: "\n        <ul class=\"nav nav-pills\">\n            <li [class.active]=\"viewMode == 'map'\">\n                <a (click)=\"viewMode = 'map'\">Map View</a>\n            </li>\n            <li [class.active]=\"viewMode == 'list'\">\n                <a (click)=\"viewMode = 'list'\">List View</a>\n            </li>\n        </ul>\n        <div [ngSwitch]=\"viewMode\">\n            <template [ngSwitchWhen]=\"'map'\" ngSwitchDefault>Map View Content</template>\n            <template [ngSwitchWhen]=\"'list'\">List View Content</template>\n        </div>\n    ",
+                        styles: ["\n        .nav {\n            cursor: pointer;\n        }\n    "]
                     }), 
                     __metadata('design:paramtypes', [])
-                ], StyleBindingComponent);
-                return StyleBindingComponent;
+                ], NgswitchComponent);
+                return NgswitchComponent;
             }());
-            exports_1("StyleBindingComponent", StyleBindingComponent);
+            exports_1("NgswitchComponent", NgswitchComponent);
         }
     }
 });
-//# sourceMappingURL=style-binding.component.js.map
+//# sourceMappingURL=ngswitch.component.js.map

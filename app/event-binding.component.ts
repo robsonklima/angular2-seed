@@ -6,7 +6,7 @@ import { Component } from 'angular2/core';
     template: `
         <p>Event Binding</p>
         <div (click)="onDivClick()">
-            <button (click)="onClick($event)">Submit</button>
+            <button class="btn btn-default" (click)="onClick($event)">Submit</button>
         <div>
     `    
 })

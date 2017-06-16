@@ -11,28 +11,31 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var StyleBindingComponent;
+    var TwoWayBindingStarComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            StyleBindingComponent = (function () {
-                function StyleBindingComponent() {
-                    this.canSave = false;
+            TwoWayBindingStarComponent = (function () {
+                function TwoWayBindingStarComponent() {
+                    this.isFavorite = false;
                 }
-                StyleBindingComponent = __decorate([
+                TwoWayBindingStarComponent.prototype.onClick = function () {
+                    this.isFavorite = !this.isFavorite;
+                };
+                TwoWayBindingStarComponent = __decorate([
                     core_1.Component({
-                        selector: 'style-binding',
-                        template: "\n        <button\n            [ngStyle]=\"{\n                'backgroundColor': canSave ? 'blue' : 'gray',\n                'color': canSave ? 'white' : 'black',\n                'fontWeight': canSave ? 'bold' : 'normal'\n            }\"\n        >Submit</button>\n    "
+                        selector: 'two-way-binding-star',
+                        template: "\n        <p>Two Way Binding STAR</p>\n        <i class=\"glyphicon\"\n            [class.glyphicon-star-empty]=\"!isFavorite\"\n            [class.glyphicon-star]=\"isFavorite\"\n            (click)=\"onClick()\">\n        </i>\n    "
                     }), 
                     __metadata('design:paramtypes', [])
-                ], StyleBindingComponent);
-                return StyleBindingComponent;
+                ], TwoWayBindingStarComponent);
+                return TwoWayBindingStarComponent;
             }());
-            exports_1("StyleBindingComponent", StyleBindingComponent);
+            exports_1("TwoWayBindingStarComponent", TwoWayBindingStarComponent);
         }
     }
 });
-//# sourceMappingURL=style-binding.component.js.map
+//# sourceMappingURL=two-way-binding-star.component.js.map

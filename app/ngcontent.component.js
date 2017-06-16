@@ -11,28 +11,27 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var StyleBindingComponent;
+    var NgcontentComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            StyleBindingComponent = (function () {
-                function StyleBindingComponent() {
-                    this.canSave = false;
+            NgcontentComponent = (function () {
+                function NgcontentComponent() {
                 }
-                StyleBindingComponent = __decorate([
+                NgcontentComponent = __decorate([
                     core_1.Component({
-                        selector: 'style-binding',
-                        template: "\n        <button\n            [ngStyle]=\"{\n                'backgroundColor': canSave ? 'blue' : 'gray',\n                'color': canSave ? 'white' : 'black',\n                'fontWeight': canSave ? 'bold' : 'normal'\n            }\"\n        >Submit</button>\n    "
+                        selector: 'bs-panel',
+                        template: "\n        <div class=\"panel panel-default\">\n            <div class=\"panel-heading\">\n                <ng-content select=\".heading\"></ng-content>\n            </div>\n            <div class=\"panel-body\">\n                <ng-content select=\".body\"></ng-content>\n            </div>\n        </div>\n    "
                     }), 
                     __metadata('design:paramtypes', [])
-                ], StyleBindingComponent);
-                return StyleBindingComponent;
+                ], NgcontentComponent);
+                return NgcontentComponent;
             }());
-            exports_1("StyleBindingComponent", StyleBindingComponent);
+            exports_1("NgcontentComponent", NgcontentComponent);
         }
     }
 });
-//# sourceMappingURL=style-binding.component.js.map
+//# sourceMappingURL=ngcontent.component.js.map

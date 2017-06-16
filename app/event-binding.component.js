@@ -31,7 +31,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 EventBindingComponent = __decorate([
                     core_1.Component({
                         selector: 'event-binding',
-                        template: "\n        <p>Event Binding</p>\n        <div (click)=\"onDivClick()\">\n            <button (click)=\"onClick($event)\">Submit</button>\n        <div>\n    "
+                        template: "\n        <p>Event Binding</p>\n        <div (click)=\"onDivClick()\">\n            <button class=\"btn btn-default\" (click)=\"onClick($event)\">Submit</button>\n        <div>\n    "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], EventBindingComponent);

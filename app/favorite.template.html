@@ -1,0 +1,8 @@
+<p>Two Way Binding STAR</p>
+<i class="glyphicon"
+    [ngClass]="{
+        'glyphicon-star-empty': !isFavorite,
+        'glyphicon-star': isFavorite
+    }"
+    (click)="onClick()">
+</i>

@@ -11,28 +11,33 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var StyleBindingComponent;
+    var ElvisComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            StyleBindingComponent = (function () {
-                function StyleBindingComponent() {
-                    this.canSave = false;
+            ElvisComponent = (function () {
+                function ElvisComponent() {
+                    this.task = {
+                        title: "Review applications",
+                        assignee: {
+                            role: null
+                        }
+                    };
                 }
-                StyleBindingComponent = __decorate([
+                ElvisComponent = __decorate([
                     core_1.Component({
-                        selector: 'style-binding',
-                        template: "\n        <button\n            [ngStyle]=\"{\n                'backgroundColor': canSave ? 'blue' : 'gray',\n                'color': canSave ? 'white' : 'black',\n                'fontWeight': canSave ? 'bold' : 'normal'\n            }\"\n        >Submit</button>\n    "
+                        selector: 'elvis',
+                        template: "\n        <ul>\n            <li>Title: {{ task.title }}</li>\n            <li>Title: {{ task.assignee?.role?.name }}</li>\n        </ul>\n    "
                     }), 
                     __metadata('design:paramtypes', [])
-                ], StyleBindingComponent);
-                return StyleBindingComponent;
+                ], ElvisComponent);
+                return ElvisComponent;
             }());
-            exports_1("StyleBindingComponent", StyleBindingComponent);
+            exports_1("ElvisComponent", ElvisComponent);
         }
     }
 });
-//# sourceMappingURL=style-binding.component.js.map
+//# sourceMappingURL=elvis.component.js.map

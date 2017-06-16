@@ -11,28 +11,31 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var StyleBindingComponent;
+    var SummaryPipe;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            StyleBindingComponent = (function () {
-                function StyleBindingComponent() {
-                    this.canSave = false;
+            SummaryPipe = (function () {
+                function SummaryPipe() {
                 }
-                StyleBindingComponent = __decorate([
-                    core_1.Component({
-                        selector: 'style-binding',
-                        template: "\n        <button\n            [ngStyle]=\"{\n                'backgroundColor': canSave ? 'blue' : 'gray',\n                'color': canSave ? 'white' : 'black',\n                'fontWeight': canSave ? 'bold' : 'normal'\n            }\"\n        >Submit</button>\n    "
-                    }), 
+                SummaryPipe.prototype.transform = function (value, args) {
+                    var limit = (args && args[0]) ? parseInt(args[0]) : 50;
+                    if (value.length <= limit)
+                        return value;
+                    if (value)
+                        return value.substring(0, limit) + "...";
+                };
+                SummaryPipe = __decorate([
+                    core_1.Pipe({ name: 'summary' }), 
                     __metadata('design:paramtypes', [])
-                ], StyleBindingComponent);
-                return StyleBindingComponent;
+                ], SummaryPipe);
+                return SummaryPipe;
             }());
-            exports_1("StyleBindingComponent", StyleBindingComponent);
+            exports_1("SummaryPipe", SummaryPipe);
         }
     }
 });
-//# sourceMappingURL=style-binding.component.js.map
+//# sourceMappingURL=summary.pipe.js.map
