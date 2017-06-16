@@ -1,4 +1,4 @@
-System.register(['angular2/core', "./courses.component", "./authors.component", "./property-binding.component", "./class-binding.component", "./style-binding.component", "./event-binding.component", "./two-way-binding.component", "./two-way-binding-star.component", "./favorite.component", "./like.component", "./voter.component", "./ngfor.component", "./ngswitch.component", "./pipe.component", "./custom-pipe.component", "./elvis.component", "./ngcontent.component", "./zippy.component"], function(exports_1, context_1) {
+System.register(['angular2/core', "./courses.component", "./authors.component", "./property-binding.component", "./class-binding.component", "./style-binding.component", "./event-binding.component", "./two-way-binding.component", "./two-way-binding-star.component", "./favorite.component", "./like.component", "./voter.component", "./ngfor.component", "./ngswitch.component", "./pipe.component", "./custom-pipe.component", "./elvis.component", "./ngcontent.component", "./zippy.component", "./contact-form.component"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', "./courses.component", "./authors.component", 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, courses_component_1, authors_component_1, property_binding_component_1, class_binding_component_1, style_binding_component_1, event_binding_component_1, two_way_binding_component_1, two_way_binding_star_component_1, favorite_component_1, like_component_1, voter_component_1, ngfor_component_1, ngswitch_component_1, pipe_component_1, custom_pipe_component_1, elvis_component_1, ngcontent_component_1, zippy_component_1;
+    var core_1, courses_component_1, authors_component_1, property_binding_component_1, class_binding_component_1, style_binding_component_1, event_binding_component_1, two_way_binding_component_1, two_way_binding_star_component_1, favorite_component_1, like_component_1, voter_component_1, ngfor_component_1, ngswitch_component_1, pipe_component_1, custom_pipe_component_1, elvis_component_1, ngcontent_component_1, zippy_component_1, contact_form_component_1;
     var AppComponent;
     return {
         setters:[
@@ -70,6 +70,9 @@ System.register(['angular2/core', "./courses.component", "./authors.component", 
             },
             function (zippy_component_1_1) {
                 zippy_component_1 = zippy_component_1_1;
+            },
+            function (contact_form_component_1_1) {
+                contact_form_component_1 = contact_form_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -129,7 +132,13 @@ System.register(['angular2/core', "./courses.component", "./authors.component", 
                         //         <div class="body">This is the body</div>
                         //         <div class="body">This is the another body</div>
                         //     </bs-panel>
-                        template: "\n        <zippy title=\"Who can see my stuff?\">\n            Content of who can see my stuff\n        </zippy>\n        <zippy title=\"Who can contact me?\">\n            Content of who can contact me\n        </zippy>\n    ",
+                        //     <zippy title="Who can see my stuff?">
+                        //         Content of who can see my stuff
+                        //     </zippy>
+                        //     <zippy title="Who can contact me?">
+                        //         Content of who can contact me
+                        //     </zippy>
+                        template: "\n        <contact-form></contact-form>\n    ",
                         directives: [
                             courses_component_1.CoursesComponent,
                             authors_component_1.AuthorsComponent,
@@ -148,7 +157,8 @@ System.register(['angular2/core', "./courses.component", "./authors.component", 
                             custom_pipe_component_1.CustomPipeComponent,
                             elvis_component_1.ElvisComponent,
                             ngcontent_component_1.NgcontentComponent,
-                            zippy_component_1.ZippyComponent
+                            zippy_component_1.ZippyComponent,
+                            contact_form_component_1.ContactFormComponent
                         ]
                     }), 
                     __metadata('design:paramtypes', [])

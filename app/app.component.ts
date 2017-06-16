@@ -17,6 +17,7 @@ import { CustomPipeComponent } from "./custom-pipe.component";
 import { ElvisComponent } from "./elvis.component";
 import { NgcontentComponent } from "./ngcontent.component";
 import { ZippyComponent } from "./zippy.component";
+import { ContactFormComponent } from "./contact-form.component";
 
 @Component({
     selector: 'my-app',
@@ -50,13 +51,14 @@ import { ZippyComponent } from "./zippy.component";
     //         <div class="body">This is the body</div>
     //         <div class="body">This is the another body</div>
     //     </bs-panel>
+    //     <zippy title="Who can see my stuff?">
+    //         Content of who can see my stuff
+    //     </zippy>
+    //     <zippy title="Who can contact me?">
+    //         Content of who can contact me
+    //     </zippy>
     template: `
-        <zippy title="Who can see my stuff?">
-            Content of who can see my stuff
-        </zippy>
-        <zippy title="Who can contact me?">
-            Content of who can contact me
-        </zippy>
+        <contact-form></contact-form>
     `, 
     directives: [
         CoursesComponent, 
@@ -76,7 +78,8 @@ import { ZippyComponent } from "./zippy.component";
         CustomPipeComponent,
         ElvisComponent,
         NgcontentComponent,
-        ZippyComponent
+        ZippyComponent,
+        ContactFormComponent
     ]
 })
 
