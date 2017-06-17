@@ -19,6 +19,7 @@ import { NgcontentComponent } from "./ngcontent.component";
 import { ZippyComponent } from "./zippy.component";
 import { ContactFormComponent } from "./contact-form.component";
 import { SubscribeFormComponent } from "./subscribe-form.component";
+import { SignUpFormComponent } from "./signup-form.component";
 
 @Component({
     selector: 'my-app',
@@ -59,8 +60,9 @@ import { SubscribeFormComponent } from "./subscribe-form.component";
     //         Content of who can contact me
     //     </zippy>
     //     <contact-form></contact-form>
+    //     <subscribe-form></subscribe-form>
     template: `
-        <subscribe-form></subscribe-form>
+        <signup-form></signup-form>
     `, 
     directives: [
         CoursesComponent, 
@@ -82,7 +84,8 @@ import { SubscribeFormComponent } from "./subscribe-form.component";
         NgcontentComponent,
         ZippyComponent,
         ContactFormComponent,
-        SubscribeFormComponent
+        SubscribeFormComponent,
+        SignUpFormComponent
     ]
 })
 
