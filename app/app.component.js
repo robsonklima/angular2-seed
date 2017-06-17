@@ -1,4 +1,4 @@
-System.register(['angular2/core', "./courses.component", "./authors.component", "./property-binding.component", "./class-binding.component", "./style-binding.component", "./event-binding.component", "./two-way-binding.component", "./two-way-binding-star.component", "./favorite.component", "./like.component", "./voter.component", "./ngfor.component", "./ngswitch.component", "./pipe.component", "./custom-pipe.component", "./elvis.component", "./ngcontent.component", "./zippy.component", "./contact-form.component", "./subscribe-form.component", "./signup-form.component"], function(exports_1, context_1) {
+System.register(['angular2/core', "./courses.component", "./authors.component", "./property-binding.component", "./class-binding.component", "./style-binding.component", "./event-binding.component", "./two-way-binding.component", "./two-way-binding-star.component", "./favorite.component", "./like.component", "./voter.component", "./ngfor.component", "./ngswitch.component", "./pipe.component", "./custom-pipe.component", "./elvis.component", "./ngcontent.component", "./zippy.component", "./contact-form.component", "./subscribe-form.component", "./signup-form.component", "./change-password-form.component"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', "./courses.component", "./authors.component", 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, courses_component_1, authors_component_1, property_binding_component_1, class_binding_component_1, style_binding_component_1, event_binding_component_1, two_way_binding_component_1, two_way_binding_star_component_1, favorite_component_1, like_component_1, voter_component_1, ngfor_component_1, ngswitch_component_1, pipe_component_1, custom_pipe_component_1, elvis_component_1, ngcontent_component_1, zippy_component_1, contact_form_component_1, subscribe_form_component_1, signup_form_component_1;
+    var core_1, courses_component_1, authors_component_1, property_binding_component_1, class_binding_component_1, style_binding_component_1, event_binding_component_1, two_way_binding_component_1, two_way_binding_star_component_1, favorite_component_1, like_component_1, voter_component_1, ngfor_component_1, ngswitch_component_1, pipe_component_1, custom_pipe_component_1, elvis_component_1, ngcontent_component_1, zippy_component_1, contact_form_component_1, subscribe_form_component_1, signup_form_component_1, change_password_form_component_1;
     var AppComponent;
     return {
         setters:[
@@ -79,6 +79,9 @@ System.register(['angular2/core', "./courses.component", "./authors.component", 
             },
             function (signup_form_component_1_1) {
                 signup_form_component_1 = signup_form_component_1_1;
+            },
+            function (change_password_form_component_1_1) {
+                change_password_form_component_1 = change_password_form_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -146,7 +149,8 @@ System.register(['angular2/core', "./courses.component", "./authors.component", 
                         //     </zippy>
                         //     <contact-form></contact-form>
                         //     <subscribe-form></subscribe-form>
-                        template: "\n        <signup-form></signup-form>\n    ",
+                        //     <signup-form></signup-form>
+                        template: "\n        <change-password-form></change-password-form>\n    ",
                         directives: [
                             courses_component_1.CoursesComponent,
                             authors_component_1.AuthorsComponent,
@@ -168,7 +172,8 @@ System.register(['angular2/core', "./courses.component", "./authors.component", 
                             zippy_component_1.ZippyComponent,
                             contact_form_component_1.ContactFormComponent,
                             subscribe_form_component_1.SubscribeFormComponent,
-                            signup_form_component_1.SignUpFormComponent
+                            signup_form_component_1.SignUpFormComponent,
+                            change_password_form_component_1.ChangePasswordFormComponent
                         ]
                     }), 
                     __metadata('design:paramtypes', [])

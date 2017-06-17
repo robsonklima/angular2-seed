@@ -20,6 +20,7 @@ import { ZippyComponent } from "./zippy.component";
 import { ContactFormComponent } from "./contact-form.component";
 import { SubscribeFormComponent } from "./subscribe-form.component";
 import { SignUpFormComponent } from "./signup-form.component";
+import { ChangePasswordFormComponent } from "./change-password-form.component";
 
 @Component({
     selector: 'my-app',
@@ -61,8 +62,9 @@ import { SignUpFormComponent } from "./signup-form.component";
     //     </zippy>
     //     <contact-form></contact-form>
     //     <subscribe-form></subscribe-form>
+    //     <signup-form></signup-form>
     template: `
-        <signup-form></signup-form>
+        <change-password-form></change-password-form>
     `, 
     directives: [
         CoursesComponent, 
@@ -85,7 +87,8 @@ import { SignUpFormComponent } from "./signup-form.component";
         ZippyComponent,
         ContactFormComponent,
         SubscribeFormComponent,
-        SignUpFormComponent
+        SignUpFormComponent,
+        ChangePasswordFormComponent
     ]
 })
 
